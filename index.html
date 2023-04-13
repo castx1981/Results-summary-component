@@ -3,45 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'sans': ['"Hanken Grotesk"', 'sans-serif']
+        },
+        extend: {
+          screens: {
+            'sm': '375px',
+          },
+          colors: {
+            // primary
+            'light-red': 'hsl(0, 100%, 67%)',
+            'orange-yellow': 'hsl(39, 100%, 56%)',
+            'green-teal': 'hsl(166, 100%, 37%)',
+            'cobalt-blue': 'hsl(234, 85%, 45%)',
+            // neutral
+            'pale-blue': 'hsl(221, 100%, 96%)',
+            'light-lavender': 'hsl(241, 100%, 89%)',
+            'dark-gray-blue': 'hsl(224, 30%, 27%)',
+            // gradients
+            'light-slate-blue': 'hsl(252, 100%, 67%)',
+            'light-royal-blue': 'hsl(241, 81%, 54%)',
+            'violet-blue': 'hsla(256, 72%, 46%, 1)',
+            'persian-blue': 'hsla(241, 72%, 46%, 0)',
+          },
+          backgroundImage: {
+            'mobile-pattern': "url('images/pattern-background-mobile.svg')",
+            'desktop-pattern': "url('images/pattern-background-desktop.svg')",
+          }
+        }
+      }
+    }
+  </script>
 </head>
 <body>
-
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<div class="container mx-auto bg-slate-50">
+  <!-- result area -->
+  <div class="pt-6 pb-10 flex flex-col items-center px-12 bg-gradient-to-b from-light-slate-blue to-light-royal-blue rounded-b-3xl">
+    <h1 class="text-lg text-center text-pale-blue">
+      Your Result
+    </h1>
+    <div class="mt-4 p-8 w-36 flex flex-col space-y-1.5 items-center bg-gradient-to-b from-violet-blue to-persian-blue rounded-full">
+      <p class="text-5xl font-extrabold text-pale-blue">76</p>
+      <p class="text-base text-light-lavender/50">of 100</p>
+    </div>
+    <h2 class="mt-4 text-2xl text-pale-blue">Great</h2>
+    <p class="mt-2 text-base text-light-lavender/70 text-center">
+      You scored higher than 65% of the people who have taken these tests.
+    </p>
   </div>
+  <!-- summary area -->
+  <div class="px-8 mt-6">
+    <h1 class="font-bold text-lg text-dark-gray-blue">Summary</h1>
+    <div class="mt-6 flex flex-col space-y-5 font-bold">
+      <!-- reaction -->
+      <div class="px-5 py-4 flex bg-light-red/5 rounded-xl">
+        <img src="images/icon-reaction.svg" alt="reaction-icon">
+        <p class="pl-3 text-light-red">Reaction</p>
+        <p class="ml-auto ">
+          <span class="text-dark-gray-blue">80</span> / <span class="text-dark-gray-blue/50">100</span>
+        </p>
+      </div>
+      <!-- memory -->
+      <div class="px-5 py-4 flex bg-orange-yellow/10 rounded-xl">
+        <img src="images/icon-memory.svg" alt="memory-icon">
+        <p class="pl-3 text-orange-yellow">Memory</p>
+        <p class="ml-auto ">
+          <span class="text-dark-gray-blue">92</span> / <span class="text-dark-gray-blue/50">100</span>
+        </p>
+      </div>
+      <!-- memory -->
+      <div class="px-5 py-4 flex bg-green-teal/5 rounded-xl">
+        <img src="images/icon-verbal.svg" alt="memory-icon">
+        <p class="pl-3 text-green-teal">Verbal</p>
+        <p class="ml-auto ">
+          <span class="text-dark-gray-blue">61</span> / <span class="text-dark-gray-blue/50">100</span>
+        </p>
+      </div>
+      <!-- visual -->
+      <div class="px-5 py-4 flex bg-cobalt-blue/5 rounded-xl">
+        <img src="images/icon-visual.svg" alt="memory-icon">
+        <p class="pl-3 text-cobalt-blue">Visual</p>
+        <p class="ml-auto ">
+          <span class="text-dark-gray-blue">72</span> / <span class="text-dark-gray-blue/50">100</span>
+        </p>
+      </div>
+    </div>
+    <!-- button -->
+    <button class="block my-6 w-full py-4 text-lg text-center text-pale-blue bg-dark-gray-blue rounded-full
+                   transition-colors bg-gradient-to-b hover:from-light-slate-blue hover:to-light-royal-blue"
+            type="button">
+      Continue
+    </button>
+  </div>
+</div>
 </body>
 </html>
