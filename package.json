@@ -1,0 +1,27 @@
+{
+  "name": "results-summary-component",
+  "version": "1.0.0",
+  "description": "![Design preview for the Results summary component coding challenge](./design/desktop-preview.jpg)",
+  "main": "tailwind.config.js",
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
+  },
+  "scripts": {
+    "build": "npx tailwindcss -i input.css -o style.css",
+    "watch": "npx tailwindcss -i input.css -o style.css -w",
+    "production": "mkdir -p public && npx tailwindcss -i input.css -o public/style.css -m && cp -r index.html images public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/castx1981/Results-summary-component.git"
+  },
+  "keywords": [
+    "tailwindcss"
+  ],
+  "author": "Luan Xiaoliang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/castx1981/Results-summary-component/issues"
+  },
+  "homepage": "https://github.com/castx1981/Results-summary-component#readme"
+}

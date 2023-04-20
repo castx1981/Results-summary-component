@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**/*.{html,js}"],
+  content: ["./index.html"],
   theme: {
-    fontFamily: {
-      'sans': ['"Hanken Grotesk"', 'sans-serif']
-    },
     extend: {
+      fontFamily: {
+        'sans': ['"Hanken Grotesk"', 'sans-serif']
+      },
       colors: {
         // primary
         'light-red': 'hsl(0, 100%, 67%)',
