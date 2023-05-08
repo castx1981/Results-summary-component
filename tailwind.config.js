@@ -22,12 +22,19 @@ module.exports = {
         'violet-blue': 'hsla(256, 72%, 46%, 1)',
         'persian-blue': 'hsla(241, 72%, 46%, 0)',
       },
-      backgroundImage: {
-        'mobile-pattern': "url('images/pattern-background-mobile.svg')",
-        'desktop-pattern': "url('images/pattern-background-desktop.svg')",
+      borderRadius: {
+        '4xl': '2rem',
+      },
+      fontSize: {
+        'base': ['16px', '21px'],
+        'lg': ['18px', '23px'],
+        '2xl': ['24px', '31px'],
+        '3xl': ['32px', '42px']
+      },
+      boxShadow: {
+        '3xl': '0 30px 60px 0 hsla(224, 82%, 58%, 0.15)',
       }
     }
   },
   plugins: [],
 }
-

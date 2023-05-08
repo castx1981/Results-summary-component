@@ -12,61 +12,57 @@
 </head>
 <body>
 <!--Global Container-->
-<div class="md:flex md:items-center md:justify-center md:min-h-screen md:bg-light-lavender/10">
-  <div class="w-[375px] mx-auto flex flex-col md:w-auto md:flex-row md:bg-transparent md:shadow-2xl md:rounded-3xl">
-    <!-- result area -->
-    <div class="md:w-80 pt-6 pb-10 flex flex-col items-center px-12 bg-gradient-to-b from-light-slate-blue to-light-royal-blue rounded-b-3xl md:rounded-3xl">
-      <h1 class="text-lg text-center text-pale-blue">
-        Your Result
-      </h1>
-      <div class="mt-4 p-8 w-36 flex flex-col space-y-1.5 items-center bg-gradient-to-b from-violet-blue to-persian-blue rounded-full">
-        <p class="text-5xl font-extrabold text-pale-blue">76</p>
-        <p class="text-base text-light-lavender/50">of 100</p>
+<div class="md:flex md:items-center md:justify-center md:min-h-screen md:bg-pale-blue">
+<!--  md:bg-transparent md:shadow-2xl md:rounded-3xl-->
+  <div class="w-[375px] mx-auto bg-white md:w-[736px] md:flex md:rounded-4xl md:shadow-3xl">
+    <!-- Result area -->
+    <div class="pt-6 pb-10 bg-gradient-to-b from-light-slate-blue to-light-royal-blue rounded-b-4xl md:w-1/2 md:pt-10 md:rounded-4xl">
+      <div class="w-[260px] mx-auto flex flex-col items-center">
+        <h2 class="text-light-lavender">Your Result</h2>
+        <div class=" mt-6 w-[140px] h-[140px] flex flex-col justify-center items-center bg-gradient-to-b from-violet-blue  rounded-full md:mt-9 md:w-[200px] md:h-[200px]">
+          <p class="text-[56px]/[72px] font-extrabold text-white md:text-[72px]/[72px]">76</p>
+          <p class="text-base font-bold text-light-lavender/50 md:text-lg">of 100</p>
+        </div>
+        <div class="mt-6 text-center md:mt-7">
+          <h1 class="text-white">Great</h1>
+          <p class="mt-2 font-medium text-base text-light-lavender md:mt-3.5 md:text-lg">
+            Your performance exceed 65% of the people conducting the test here!
+          </p>
+        </div>
       </div>
-      <h2 class="mt-4 text-2xl text-pale-blue">Great</h2>
-      <p class="mt-2 text-base text-light-lavender/70 text-center">
-        You scored higher than 65% of the people who have taken these tests.
-      </p>
     </div>
-    <!-- summary area -->
-    <div class="md:w-80 px-8 pt-6">
-      <h1 class="font-bold text-lg text-dark-gray-blue">Summary</h1>
-      <div class="mt-4 flex flex-col space-y-4 font-bold">
-        <!-- reaction -->
-        <div class="px-5 py-4 flex bg-light-red/5 rounded-xl md:py-2">
+    <!-- Summary area -->
+    <div class="px-8 pt-6 pb-8 md:w-1/2 md:px-10 md:pt-9 md:pb-12">
+      <h2 class="text-dark-gray-blue">Summary</h2>
+      <div class="mt-6 flex flex-col space-y-4 md:mt-7">
+        <!-- Reaction Item -->
+        <div class="summary-item bg-light-red">
           <img src="images/icon-reaction.svg" alt="reaction-icon">
-          <p class="pl-3 text-light-red">Reaction</p>
-          <p class="ml-auto ">
-            <span class="text-dark-gray-blue">80</span> / <span class="text-dark-gray-blue/50">100</span>
-          </p>
+          <p class="summary-item-label text-light-red">Reaction</p>
+          <p class="summary-item-score">80 <span class="opacity-50">/ 100</span></p>
         </div>
-        <!-- memory -->
-        <div class="px-5 py-4 flex bg-orange-yellow/10 rounded-xl md:py-2">
+        <!-- Memory Item -->
+        <div class="summary-item bg-orange-yellow">
           <img src="images/icon-memory.svg" alt="memory-icon">
-          <p class="pl-3 text-orange-yellow">Memory</p>
-          <p class="ml-auto ">
-            <span class="text-dark-gray-blue">92</span> / <span class="text-dark-gray-blue/50">100</span>
+          <p class="summary-item-label text-orange-yellow">Memory</p>
+          <p class="summary-item-score">92 <span class="opacity-50">/ 100</span></p>
+        </div>
+        <!-- Verbal Item -->
+        <div class="summary-item bg-green-teal">
+          <img src="images/icon-verbal.svg" alt="verbal-icon">
+          <p class="summary-item-label text-green-teal">Verbal</p>
+          <p class="summary-item-score">61 <span class="opacity-50">/ 100</span>
           </p>
         </div>
-        <!-- memory -->
-        <div class="px-5 py-4 flex bg-green-teal/5 rounded-xl md:py-2">
-          <img src="images/icon-verbal.svg" alt="memory-icon">
-          <p class="pl-3 text-green-teal">Verbal</p>
-          <p class="ml-auto ">
-            <span class="text-dark-gray-blue">61</span> / <span class="text-dark-gray-blue/50">100</span>
-          </p>
-        </div>
-        <!-- visual -->
-        <div class="px-5 py-4 flex bg-cobalt-blue/5 rounded-xl md:py-2">
-          <img src="images/icon-visual.svg" alt="memory-icon">
-          <p class="pl-3 text-cobalt-blue">Visual</p>
-          <p class="ml-auto ">
-            <span class="text-dark-gray-blue">72</span> / <span class="text-dark-gray-blue/50">100</span>
+        <!-- Visual Item -->
+        <div class="summary-item bg-cobalt-blue">
+          <img src="images/icon-visual.svg" alt="visual-icon">
+          <p class="summary-item-label text-cobalt-blue">Visual</p>
+          <p class="summary-item-score">72 <span class="opacity/50">/ 100</span>
           </p>
         </div>
       </div>
-      <button class="block w-full my-6 py-3 md:py-2 text-lg text-center text-pale-blue bg-dark-gray-blue rounded-full
-                     transition-colors bg-gradient-to-b hover:from-light-slate-blue hover:to-light-royal-blue"
+      <button class="w-full mt-6 py-4 font-bold text-lg text-center text-white bg-dark-gray-blue rounded-full transition-colors hover:bg-gradient-to-b hover:from-light-slate-blue hover:to-light-royal-blue md:mt-10"
               type="button">
         Continue
       </button>
